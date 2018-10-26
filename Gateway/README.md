@@ -29,7 +29,7 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
 - Clone the installer and start the installation
 
-        $ git clone https://github.com/kuanyili/rak831-gateway.git ~/rak831-gateway
+        $ git clone https://github.com/Manodhayan/Gateway.git ~/rak831-gateway
         $ cd ~/rak831-gateway
         $ sudo ./install.sh
 
