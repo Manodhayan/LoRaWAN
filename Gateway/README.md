@@ -75,6 +75,8 @@ cd
 cd LoRaWAN/Gateway
 sudo ./install.sh
 ```
+Congratulations! Your gateway has been successfuly established with your own configured ID.
+
 Note: Copy the Gateway ID displayed and use it during gateway registration
 
     
