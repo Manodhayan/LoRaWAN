@@ -13,7 +13,9 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 - [Enable one-time SSH](https://www.raspberrypi.org/blog/a-security-update-for-raspbian-pixel/)
 - Use `raspi-config` utility to
 
-        $ sudo raspi-config
+    ```
+    sudo raspi-config
+    ```
 
     - **Enable SPI** (`5 Interfacing Options -> P4 SPI`)
     - **Enable SSH** (`5 Interfacing Options -> P2 SSH`)
@@ -23,16 +25,19 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
 - Make sure you have an updated installation and install `git`:
 
-        $ sudo apt update
-        $ sudo apt dist-upgrade
-        $ sudo apt install git
+        sudo apt update
+        sudo apt dist-upgrade
+        sudo apt install git
 
-- Clone the installer and start the installation
+- Clone the installer, if you haven't downloaded this repository before
     ```
-        $ git clone https://github.com/Manodhayan/LoRaWAN.git ~/rak831-gateway
+        git clone https://github.com/Manodhayan/LoRaWAN.git
     ```
-        $ cd ~/rak831-gateway
-        $ sudo ./install.sh
+- Move to the directory and start the installation
+    ```
+        cd LoRaWAN/Gateway
+        sudo ./install.sh
+    ```
 
 - Register gateway [via Semtech UDP packet forwarder](https://www.thethingsnetwork.org/docs/gateways/registration.html#via-semtech-udp-packet-forwarder)
 
