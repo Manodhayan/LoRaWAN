@@ -49,7 +49,7 @@ Note: Copy the Gateway ID displayed and use it during gateway registration
 
     - Gateway's EUI can be found in `/opt/ttn-gateway/conf/local_conf.json`
 
-## Step 5: Configure Gateway ID (If you Gateway ID is already registerd)
+## Step 5: Configure Gateway ID (If your Gateway ID is already registerd)
 
 If your gateway ID already exits in Things Network. Then do the following to change your Gateway ID.<br>
 - In Terminal
@@ -82,7 +82,7 @@ Note: Copy the Gateway ID displayed and use it during gateway registration
     
     
 
-## Update
+## Update 
 
 If you have a running gateway and want to update, simply run the installer again:
 
