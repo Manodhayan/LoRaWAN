@@ -19,9 +19,9 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
     - **Enable SPI** (`5 Interfacing Options -> P4 SPI`)
     - **Enable SSH** (`5 Interfacing Options -> P2 SSH`)
-    - Set hostname (`2 Network Options -> N1 Hostname`) (Optional Step)
-    - Change locale (`4 Localisation Options -> I1 Change Locale`) (Optional Step)
-    - Change timezone (`4 Localisation Options -> I2 Change Timezone`) (Optional Step)
+    - Set hostname (`2 Network Options -> N1 Hostname`) (Optional)
+    - Change locale (`4 Localisation Options -> I1 Change Locale`) (Optional)
+    - Change timezone (`4 Localisation Options -> I2 Change Timezone`) (Optional)
 
 - Make sure you have an updated installation and install `git`:
 
