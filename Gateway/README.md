@@ -17,9 +17,9 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
     - **Enable SPI** (`5 Interfacing Options -> P4 SPI`)
     - **Enable SSH** (`5 Interfacing Options -> P2 SSH`)
-    - Set hostname (`2 Network Options -> N1 Hostname`)
-    - Change locale (`4 Localisation Options -> I1 Change Locale`)
-    - Change timezone (`4 Localisation Options -> I2 Change Timezone`)
+    - Set hostname (`2 Network Options -> N1 Hostname`) (Optional Step)
+    - Change locale (`4 Localisation Options -> I1 Change Locale`) (Optional Step)
+    - Change timezone (`4 Localisation Options -> I2 Change Timezone`) (Optional Step)
 
 - Make sure you have an updated installation and install `git`:
 
@@ -28,8 +28,9 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
         $ sudo apt install git
 
 - Clone the installer and start the installation
-
-        $ git clone https://github.com/Manodhayan/Gateway.git ~/rak831-gateway
+    ```
+        $ git clone https://github.com/Manodhayan/LoRaWAN.git ~/rak831-gateway
+    ```
         $ cd ~/rak831-gateway
         $ sudo ./install.sh
 
