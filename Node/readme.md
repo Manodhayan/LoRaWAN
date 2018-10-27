@@ -68,8 +68,8 @@ Replace this with your APPKEY
 
 <b>Note: Further steps suits only for Adafruit Feather 32u4</b>
  ## Step 4: Configure LoRa Node*
- This is the most important step. You might need datasheet for you node. Make sure you are using Adafruit Feather 32u4 and verify the pin numbers.
- Find this chunk of code and do the verification.
+ This is the most important step. You might need datasheet of your node. Make sure you are using Adafruit Feather 32u4 and verify the pin numbers.
+ Find this chunk of code and do the verification with the datasheet.
  ```
  const lmic_pinmap lmic_pins = {
     .nss = 8,
@@ -78,18 +78,20 @@ Replace this with your APPKEY
     .dio = {7,6,LMIC_UNUSED_PIN},
 };
  ```
- Once, done proceed below
+
 ## Step 6 : Testing Connection
-Just Upload the code to your board and go to Devices tab in your things network application and click on your device.
+ Once done, Just Upload the code to your board and go to Devices tab in your things network application. Select your device.
+
 ![Credentials](navigate.PNG)
 Check the status of your device after successful upload.
+<br>
 Note: Make sure you have a gateway that is established properly near to your location. It doesn't matter whether you own it or not.
 
 ![Credentials](Status.PNG)
 
  ## Step 5: Practice your code
  If you are interfacing any sensor, Like I used DHT 11 to measure temperature and humidity. First interface with Adafruit Feather 32u4 just like Arduino.
- Check whether everything works fine. Okay let's move on
+ Check whether everything works fine and move on
 
  ## Step 6: Dump your code
 Find do_send(osjob_t* j) function in lora_device_1.ino. Copy the code in void loop() of your practice code and paste in the first line of do_send(osjob_t* j) function in lora_device_1.ino.<br><br>
@@ -113,7 +115,8 @@ LMIC_setTxData2(port, (uint8_t*) byte_array, size_of_byte_array ,pending_data);
 Note: This might not works for all the cases. You have to apply your own coding skills for complex data handling operations.
 
 Okay, Now store your data one by into a byte array. A byte can store value less than 256 (2^8).
-For better understanding of storing your data into byte array. Go through this link [Payload Format ](https://www.youtube.com/watch?v=nT2FnwCoP7w). This tutorial will be cover upto payload decoding at Things Network.
+For better understanding of storing your data into byte array. Go through this link [Payload Format ](https://www.youtube.com/watch?v=nT2FnwCoP7w). This tutorial will be cover upto payload decoding at Things Network. 
+And you are done with the node!
 
 ## Congratulations
 You have successfully made your data transmission.
