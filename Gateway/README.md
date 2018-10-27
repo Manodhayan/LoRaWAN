@@ -32,13 +32,15 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 ## Step 3: Download Neccessary Files
 - Clone the installer, if you haven't downloaded this repository before
     ```
-        git clone https://github.com/Manodhayan/LoRaWAN.git
+        sudo git clone https://github.com/Manodhayan/LoRaWAN.git
     ```
 ## Step 4: Install Gateway
 
 - Move to the directory and start the installation
     ```
+        cd
         cd LoRaWAN/Gateway
+        sudo chmod +x install.sh start.sh uninstall.sh
         sudo ./install.sh
     ```
 Congratulations! Your gateway has been successfuly established.<br>
