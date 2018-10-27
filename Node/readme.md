@@ -18,7 +18,7 @@ https://www.thethingsnetwork.org/docs/devices/registration.html
 
 ## Step 4: Entering your Credentials
 You can find your credentials on Applications->Your Application<br>
-![Credentials](navigate.png)
+![Credentials](navigate.PNG)
 
 On Devices tab. Navigate into your device and find your credentials
 ![Credentials](credentials.png)
