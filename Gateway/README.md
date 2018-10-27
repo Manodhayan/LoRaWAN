@@ -25,23 +25,29 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
 ## Step 2: Set your Raspberry Pi up to date
 - Make sure you have an updated installation and install `git`:
-
-        sudo apt update
-        sudo apt dist-upgrade
-        sudo apt install git
+    ```
+    sudo apt update
+    sudo apt dist-upgrade
+    sudo apt install git
+    ```
 ## Step 3: Download Neccessary Files
 - Clone the installer, if you haven't downloaded this repository before
     ```
-        sudo git clone https://github.com/Manodhayan/LoRaWAN.git
+    cd
+    mkdir ttn
+    cd ttn
+    sudo git clone https://github.com/Manodhayan/LoRaWAN.git
     ```
 ## Step 4: Install Gateway
 
 - Move to the directory and start the installation
     ```
-        cd LoRaWAN/Gateway
-        sudo chmod +x install.sh start.sh uninstall.sh disable_lbt.py
-        sudo ./install.sh
+    cd LoRaWAN/Gateway
+    sudo chmod +x install.sh start.sh uninstall.sh disable_lbt.py
+    sudo ./install.sh
     ```
+- When prompted, Please enter your frequency plan as : 1 (EU - This is only for testing purpose, it's mandatory to select frequency according to your residing country)
+
 Congratulations! Your gateway has been successfuly established.<br>
 Note: Copy the Gateway ID displayed and use it during gateway registration
 
@@ -76,17 +82,7 @@ cd
 cd LoRaWAN/Gateway
 sudo ./install.sh
 ```
+- When prompted, Please enter your frequency plan as : 1 (EU - This is only for testing purpose, it's mandatory to select frequency according to your residing country)
 Congratulations! Your gateway has been successfuly established with your own configured ID.
 
 Note: Copy the Gateway ID displayed and use it during gateway registration
-
-    
-    
-
-## Update 
-
-If you have a running gateway and want to update, simply run the installer again:
-
-    $ cd ~/rak831-gateway
-    $ git pull
-    $ sudo ./install.sh
