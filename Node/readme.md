@@ -37,9 +37,11 @@ Find lora_device_1.ino in Node subdirectory of your extracted folder.
 <br>
 Click on <> to get formatted HEX address and then click on double arrow so that the hex formatted arrange as LSB to MSB. Click on Clipborad icon to copy the address.
 <br><br>Find this line of code 
+
 ```
 static const u1_t DEVEUI[8]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; //Replace your DEVEUI -LSB->MSB
 ```
+
 Replace this with your DEVEUI
 - Application EUI
 <br>
@@ -71,6 +73,13 @@ Replace this with your APPKEY
 };
  ```
  Once, done proceed below
+## Step 6 : Testing Connection
+Just Upload the code to your board and go to Devices tab in your things network application and click on your device.
+![Credentials](navigate.PNG)
+Check the status of your device after successful upload.
+Note: Make sure you have a gateway that is established properly near to your location. It doesn't matter whether you own it or not.
+
+![Credentials](Status.PNG)
 
  ## Step 5: Practice your code
  If you are interfacing any sensor, Like I used DHT 11 to measure temperature and humidity. First interface with Adafruit Feather 32u4 just like Arduino.
@@ -78,6 +87,27 @@ Replace this with your APPKEY
 
  ## Step 6: Dump your code
 Find do_send(osjob_t* j) function in lora_device_1.ino. Copy the code in void loop() of your practice code and paste in the first line of do_send(osjob_t* j) function in lora_device_1.ino.<br><br>
-In my case, I'm just measuring temperature and humidity.
+In my case, I'm just measuring temperature and humidity and assigning into a variable.
 
-Note: This might not works for all the cases. You have to apply your own coding skills for complex data handling operations
+In LoRa, you can send you data as packets. Each packet can contain several bytes. So you have to store your data into a byte array.
+I named my byte array as buffer. I prefer you to use the same name else you have to modify your byte name array in the line shown below.
+```
+LMIC_setTxData2(1, (uint8_t*) buffer, sizeof(buffer) , 0);
+```
+This will be available at the last line of do_send(osjob_t* j) function .
+Syntax is
+```
+LMIC_setTxData2(port, (uint8_t*) byte_array, size_of_byte_array ,pending_data);
+```
+-  port-The port you are going to access in Gateway<br>
+- byte_array- Byte array variable<br> 
+- size_of_byte_array- Size of your byte array<br>
+- pending_data - We are saying that no data is pending so far
+<br><br>
+Note: This might not works for all the cases. You have to apply your own coding skills for complex data handling operations.
+
+Okay, Now store your data one by into a byte array. A byte can store value less than 256 (2^8).
+For better understanding of storing your data into byte array. Go through this link [Payload Format ](https://www.youtube.com/watch?v=nT2FnwCoP7w). This tutorial will be cover upto payload decoding at Things Network.
+
+## Congratulations
+You have successfully made your data transmission.
