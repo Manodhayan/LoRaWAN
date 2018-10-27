@@ -43,21 +43,27 @@ static const u1_t DEVEUI[8]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
 ```
 
 Replace this with your DEVEUI
+
 - Application EUI
 <br>
 Click on <> to get formatted HEX address and then click on double arrow so that the hex formatted arrange as LSB to MSB. Click on Clipborad icon to copy the address.
-<br><br>Find this line of code 
+<br><br>Find this line of code
+
 ```
 static const u1_t APPEUI[8] = { 0x9D, 0x1D, 0x01, 0xD0, 0x7E, 0xD5, 0xB3, 0x70 };//Replace your APPEUI -LSB->MSB
 ```
+
 Replace this with your APPEUI
+
  - Application Key (App Key)
 <br>
 This time don't click on <> because this needs to be MSB to LSB. So just click on Clipborad icon to copy the address.
-<br><br>Find this line of code 
+<br><br>Find this line of code
+
 ```
 static const u1_t APPKEY[16] = { 0x22, 0x8E, 0xC0, 0xB4, 0x91, 0xFD, 0x39, 0xA0, 0x3E, 0xE0, 0xAC, 0xD7, 0x67, 0x4A, 0x5E, 0x17 };//Replace your APPKEY -MSB->LSB
 ```
+
 Replace this with your APPKEY
 
 <b>Note: Further steps suits only for Adafruit Feather 32u4</b>
