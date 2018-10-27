@@ -38,7 +38,6 @@ Reference setup for [The Things Network](https://www.thethingsnetwork.org/) gate
 
 - Move to the directory and start the installation
     ```
-        cd
         cd LoRaWAN/Gateway
         sudo chmod +x install.sh start.sh uninstall.sh
         sudo ./install.sh
