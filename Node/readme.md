@@ -1,7 +1,7 @@
 # Configure your LoRa Node
 ## Step 0: Download and extract this repository on your windows machine before proceeding.<br>
 
-![Credentials](download.png)
+<img src="download.png" class="img-responsive" alt="">
 Extract the downloaded zip.For convinience, Extract the zip folder into desktop.
 
 ## Step 1: Setting up the environment
