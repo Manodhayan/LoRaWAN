@@ -2,7 +2,7 @@
 ## Step 0: Download and extract this repository on your windows machine before proceeding.<br>
 
 ![Credentials](download.PNG)
-Extract the downloaded zip.For convinience, Extract the zip folder into desktop.
+Extract the downloaded zip.For convenience, Extract the zip folder into desktop.
 
 ## Step 1: Setting up the environment
 - Install [Arduino](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.7-windows.exe)
@@ -14,7 +14,7 @@ Extract the downloaded zip.For convinience, Extract the zip folder into desktop.
 
 ![Credentials](board.PNG)
 Then press OK.
-- Now, Click on Tools->Board->Boards Manager. It will download the list of boards availabe. It might take few seconds.
+- Now, Click on Tools->Board->Boards Manager. It will download the list of boards available. It might take few seconds.
 - Search for Adafruit Feather 32u4. Results get filtered and only one will remain. Click on that and press install (if you haven't before).
 
 <br><br>
@@ -25,7 +25,7 @@ Great Work!. Environment is ready to use.
 https://www.thethingsnetwork.org/docs/devices/registration.html
 .<br>Make sure you register in OTAA(Over the Air Activation) mode not as ABP (Active by Personalisation)
 
-## Step 4: Entering your Credentials
+## Step 3: Entering your Credentials
 You can find your credentials on Applications->Your Application<br>
 ![Credentials](navigate.PNG)
 
@@ -79,7 +79,7 @@ Replace this with your APPKEY
 };
  ```
 
-## Step 6 : Testing Connection
+## Step 5 : Testing Connection
  Once done, Just Upload the code to your board and go to Devices tab in your things network application. Select your device.
 
 ![Credentials](navigate.PNG)
@@ -89,15 +89,15 @@ Note: Make sure you have a gateway that is established properly near to your loc
 
 ![Credentials](Status.PNG)
 
- ## Step 5: Practice your code
+ ## Step 6: Practice your code
  If you are interfacing any sensor, Like I used DHT 11 to measure temperature and humidity. First interface with Adafruit Feather 32u4 just like Arduino.
  Check whether everything works fine and move on
 
- ## Step 6: Dump your code
+ ## Step 7: Dump your code
 Find do_send(osjob_t* j) function in lora_device_1.ino. Copy the code in void loop() of your practice code and paste in the first line of do_send(osjob_t* j) function in lora_device_1.ino.<br><br>
 In my case, I'm just measuring temperature and humidity and assigning into a variable.
 
-In LoRa, you can send you data as packets. Each packet can contain several bytes. So you have to store your data into a byte array.
+In LoRa, you can send your data as packets. Each packet can contain several bytes. So you have to store your data into a byte array.
 I named my byte array as buffer. I prefer you to use the same name else you have to modify your byte name array in the line shown below.
 ```
 LMIC_setTxData2(1, (uint8_t*) buffer, sizeof(buffer) , 0);
